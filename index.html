@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>废土抉择：最后的日记</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- 游戏容器 -->
+    <div id="game-container">
+        <!-- 头部：玩家状态栏 -->
+        <header class="status-bar">
+            <div class="status-item">体力：<span id="stamina">100</span>/100</div>
+            <div class="status-item">健康：<span id="health">100</span>/100</div>
+            <div class="status-item">食物：<span id="food">3</span></div>
+            <div class="status-item">水源：<span id="water">3</span></div>
+        </header>
+         <script src="game.js"></script>
+
+        <!-- 主要内容区 -->
+        <main class="content-area">
+            <!-- 日记系统：记录玩家经历 -->
+            <div class="diary">
+                <h3>【日记】<span id="diary-date">第1天</span></h3>
+                <div id="diary-content">
+                    你在一间废弃的公寓中醒来，头痛欲裂。窗外传来奇怪的嘶吼声，阳光透过破碎的窗户洒进来，照亮了房间里的血迹...<br>
+                    <em>["是", "查看周围环境", "搜索房间内的物资"]</em>
+                </div>
+            </div>
+
+            <!-- 场景描述区 -->
+            <div class="scene-description">
+                <h2 id="scene-title">废弃公寓</h2>
+                <p id="scene-text">房间里弥漫着一股腐臭味，沙发上有一滩干涸的血迹。墙角的柜子半开着，里面似乎有什么东西...</p>
+            </div>
+
+            <!-- 交互选项区 -->
+            <div class="interaction-options">
+                <button onclick="chooseOption(0)">检查柜子</button>
+                <button onclick="chooseOption(1)">搜索客厅</button>
+                <button onclick="chooseOption(2)">尝试打开窗户</button>
+            </div>
+        </main>
+
+        <!-- 底部：导航栏 -->
+        <footer class="nav-bar">
+            <button onclick="goToMainMenu()">主菜单</button>
+            <button onclick="saveGame()">保存游戏</button>
+            <button onclick="loadGame()">加载游戏</button>
+        </footer>
+    </div>
+
+    <script src="game.js"></script>
+</body>
+</html>
